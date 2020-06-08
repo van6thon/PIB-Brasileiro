@@ -1,0 +1,16 @@
+import matplotlib.pyplot as graphic
+years_of_pib = ["1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010",
+                "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"]
+valuers_of_pib = [863.7*1.20, 599.4*1.80, 655.4*1.95, 559.4*2.31, 508*3.55, 558.3*2.90, 669.3*2.65, 891.6*2.32,
+                  1108*2.13, 1397*1.77, 1696*2.33, 1667*1.74, 2209*1.66, 2616*1.86, 2465*2.04, 2473*2.35,
+                  2456*2.66, 1802*3.95, 1796*3.25, 2054*3.31, 1869*3.87]
+graphic.figure(figsize=(15, 10))
+graphic.plot(years_of_pib, valuers_of_pib, color="blue")
+graphic.ylim(100, 8000)
+graphic.title("Brazilian GDP between 1998 and 2018 in R$ Billion", fontsize=15)
+graphic.scatter(years_of_pib, valuers_of_pib, marker="*")
+graphic.xlabel("Year", color="black", fontsize=15)
+graphic.ylabel("Value in Real", color="black", fontsize=18)
+graphic.grid(True)
+graphic.legend(["Source: IPEADATA and World Bank"], loc=4)
+graphic.show()
